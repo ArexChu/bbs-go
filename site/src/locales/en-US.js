@@ -540,7 +540,7 @@ export default {
     },
     about: {
       title: "About Us",
-      desc: "BBS-GO is a modern, high-performance open source community forum system. Our design philosophy is lightweight, efficient, easy to extend and deploy, aiming to provide developers and community managers with a powerful online community solution.",
+      desc: "To enable enthusiasts to create and communicate freely, safely, and sustainably, and to pass on these works and emotions for generations to come.",
       featuresTitle: "Core Features",
       feature1Title: "High Performance:",
       feature1: " Ensures smooth user experience even under high load.",
@@ -567,7 +567,7 @@ export default {
       licenseDesc2: "open source license.",
       contactTitle: "Contact & Support",
       contactDesc:
-        "If you encounter any problems or have business cooperation needs, please contact us through the following ways.",
+        "If you encounter any problems, please contact us through the following ways.",
       community: "Community:",
       docs: "Docs:",
     },

@@ -14,7 +14,7 @@
       </div>
       <div>
         Powered by
-        <a href="https://bbs-go.com" target="_blank" class="light">BBS-GO</a>
+        <a href="https://bbs.portalapi.site" target="_blank" class="light">bbs</a>
       </div>
     </div>
   </footer>
