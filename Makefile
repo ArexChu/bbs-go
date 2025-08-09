@@ -18,77 +18,17 @@ build: clean build-site build-admin
 # 构建所有平台的服务器
 .PHONY: build-all-platforms
 build-all-platforms: clean build-site build-admin
-	@echo "build macos amd64..."
-	@cd server && GOOS=darwin GOARCH=amd64 go build -v -o bbs-go-macos-amd64 main.go
-	@mkdir -p dist/bbs-go-macos-amd64
-	@cp -r server/bbs-go-macos-amd64 dist/bbs-go-macos-amd64/bbs-go
-	@cp -r server/migrations dist/bbs-go-macos-amd64/migrations
-	@cp -r server/locales dist/bbs-go-macos-amd64/locales
-	@cp -r site/dist dist/bbs-go-macos-amd64/site
-	@cp -r admin/dist dist/bbs-go-macos-amd64/admin
-	@zip -r dist/bbs-go-macos-amd64.zip dist/bbs-go-macos-amd64
-	@rm -rf dist/bbs-go-macos-amd64
-	@echo "build macos amd64 done"
-
-	@echo "build macos arm64..."
-	@cd server && GOOS=darwin GOARCH=arm64 go build -v -o bbs-go-macos-arm64 main.go
-	@mkdir -p dist/bbs-go-macos-arm64
-	@cp -r server/bbs-go-macos-arm64 dist/bbs-go-macos-arm64/bbs-go
-	@cp -r server/migrations dist/bbs-go-macos-arm64/migrations
-	@cp -r server/locales dist/bbs-go-macos-arm64/locales
-	@cp -r site/dist dist/bbs-go-macos-arm64/site
-	@cp -r admin/dist dist/bbs-go-macos-arm64/admin
-	@zip -r dist/bbs-go-macos-arm64.zip dist/bbs-go-macos-arm64
-	@rm -rf dist/bbs-go-macos-arm64
-	@echo "build macos arm64 done"
-
-	@echo "build windows amd64..."
-	@cd server && GOOS=windows GOARCH=amd64 go build -v -o bbs-go-windows-amd64.exe main.go
-	@mkdir -p dist/bbs-go-windows-amd64
-	@cp -r server/bbs-go-windows-amd64.exe dist/bbs-go-windows-amd64/bbs-go.exe
-	@cp -r server/migrations dist/bbs-go-windows-amd64/migrations
-	@cp -r server/locales dist/bbs-go-windows-amd64/locales
-	@cp -r site/dist dist/bbs-go-windows-amd64/site
-	@cp -r admin/dist dist/bbs-go-windows-amd64/admin
-	@zip -r dist/bbs-go-windows-amd64.zip dist/bbs-go-windows-amd64
-	@rm -rf dist/bbs-go-windows-amd64
-	@echo "build windows amd64 done"
-
-	@echo "build windows 386..."
-	@cd server && GOOS=windows GOARCH=386 go build -v -o bbs-go-windows-386.exe main.go
-	@mkdir -p dist/bbs-go-windows-386
-	@cp -r server/bbs-go-windows-386.exe dist/bbs-go-windows-386/bbs-go.exe
-	@cp -r server/migrations dist/bbs-go-windows-386/migrations
-	@cp -r server/locales dist/bbs-go-windows-386/locales
-	@cp -r site/dist dist/bbs-go-windows-386/site
-	@cp -r admin/dist dist/bbs-go-windows-386/admin
-	@zip -r dist/bbs-go-windows-386.zip dist/bbs-go-windows-386
-	@rm -rf dist/bbs-go-windows-386
-	@echo "build windows 386 done"
-
-	@echo "build linux amd64..."
-	@cd server && GOOS=linux GOARCH=amd64 go build -v -o bbs-go-linux-amd64 main.go
-	@mkdir -p dist/bbs-go-linux-amd64
-	@cp -r server/bbs-go-linux-amd64 dist/bbs-go-linux-amd64/bbs-go
-	@cp -r server/migrations dist/bbs-go-linux-amd64/migrations
-	@cp -r server/locales dist/bbs-go-linux-amd64/locales
-	@cp -r site/dist dist/bbs-go-linux-amd64/site
-	@cp -r admin/dist dist/bbs-go-linux-amd64/admin
-	@zip -r dist/bbs-go-linux-amd64.zip dist/bbs-go-linux-amd64
-	@rm -rf dist/bbs-go-linux-amd64
-	@echo "build linux amd64 done"
-
-	@echo "build linux 386..."
-	@cd server && GOOS=linux GOARCH=386 go build -v -o bbs-go-linux-386 main.go
-	@mkdir -p dist/bbs-go-linux-386
-	@cp -r server/bbs-go-linux-386 dist/bbs-go-linux-386/bbs-go
-	@cp -r server/migrations dist/bbs-go-linux-386/migrations
-	@cp -r server/locales dist/bbs-go-linux-386/locales
-	@cp -r site/dist dist/bbs-go-linux-386/site
-	@cp -r admin/dist dist/bbs-go-linux-386/admin
-	@zip -r dist/bbs-go-linux-386.zip dist/bbs-go-linux-386
-	@rm -rf dist/bbs-go-linux-386
-	@echo "build linux 386 done"
+	@echo "build linux arm64..."
+	@cd server && GOOS=linux GOARCH=arm64 go build -v -o bbs-go-linux-arm64 main.go
+	@mkdir -p dist/bbs-go-linux-arm64
+	@cp -r server/bbs-go-linux-arm64 dist/bbs-go-linux-arm64/bbs-go
+	@cp -r server/migrations dist/bbs-go-linux-arm64/migrations
+	@cp -r server/locales dist/bbs-go-linux-arm64/locales
+	@cp -r site/dist dist/bbs-go-linux-arm64/site
+	@cp -r admin/dist dist/bbs-go-linux-arm64/admin
+	@zip -r dist/bbs-go-linux-arm64.zip dist/bbs-go-linux-arm64
+	@rm -rf dist/bbs-go-linux-arm64
+	@echo "build linux arm64 done"
 
 	@echo "all done"
 
